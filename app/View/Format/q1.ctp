@@ -1,7 +1,7 @@
 <div id="message1">
 
 
-	<?php echo $this->Form->create('Type', array('id' => 'form_type', 'type' => 'file', 'class' => '', 'method' => 'POST', 'autocomplete' => 'off', 'inputDefaults' => array(
+	<?php echo $this->Form->create(false, array('url' => array('controller' => 'Format', 'action' => 'q1_post'), 'id' => 'form_type', 'type' => 'file', 'class' => '', 'method' => 'POST', 'autocomplete' => 'off', 'inputDefaults' => array(
 
 		'label' => false, 'div' => false, 'type' => 'text', 'required' => false
 	))) ?>
@@ -16,6 +16,7 @@
 
 	<?php echo $this->Form->input('type', array('legend' => false, 'type' => 'radio', 'options' => $options_new, 'before' => '<label class="radio line notcheck">', 'after' => '</label>', 'separator' => '</label><label class="radio line notcheck">')); ?>
 
+	<?php echo $this->Form->button('Submit', array('type' => 'submit', 'class' => 'btn')); ?>
 
 	<?php echo $this->Form->end(); ?>
 
